@@ -21,14 +21,21 @@ class Veicolo {
     }
 
     informazioni() {
+        let infos = "";
         for (let key in this) {
-            console.log(key + ": " + this[key]);
+            infos += key + ": " + this[key] + "; ";
         }
+        return infos
     }
 }
 
+const audi = new Veicolo("Audi", 2015, "Rossa", 5, "Gpl")
 const fiat = new Veicolo("Fiat", 2019, "Blu", 5, "Benzina")
 console.log(fiat.calcolaEta());
+console.log(audi.calcolaEta());
+
 console.log(fiat.informazioni());
+console.log(audi.informazioni());
+
 
 
